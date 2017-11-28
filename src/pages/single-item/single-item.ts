@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
+
+@Component({
+  selector: 'page-single-item',
+  templateUrl: 'single-item.html',
+  providers: [Http]
+})
+export class SingleItem {
+
+  item: any;
+
+  constructor(
+              public navCtrl: NavController,
+              private navParams:NavParams,
+              )
+            {
+              this.item = this.navParams.data;
+              console.log(this.item);
+            }
+
+  // ------------------------------------------------------------------------------------------
+  // FUNCTIONS
+  // ------------------------------------------------------------------------------------------
+
+
+}

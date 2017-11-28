@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <img ion-right src="assets/imgs/logo.png" class="navbarLogo" />
+    <ion-title>Todos los Proyectos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Toolbar to wrap search bar
+  <ion-toolbar>
+-->
+    <!-- Searchbar Code -->
+    <ion-searchbar
+      placeholder="Search"
+      (ionInput)="getItems($event)">
+    </ion-searchbar>
+    <!-- End of Searchbar Code -->
+  <!--
+  </ion-toolbar>
+ End of Toolbar Code -->
+
+
+
+  <!-- List Code -->
+  <ion-list>
+
+    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <ion-avatar item-left>
+          <img src="{{ item.imgpath }}">
+        </ion-avatar>
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.category }}</p>
+    </ion-item>
+
+  </ion-list>
+  <!-- End of List Code -->
+
+
+
+
+</ion-content>

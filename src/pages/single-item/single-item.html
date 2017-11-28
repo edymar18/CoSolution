@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <img ion-right src="assets/imgs/logo.png" class="navbarLogo" />
+    <ion-title>Proyecto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!-- Header content with background -->
+    <div>
+      <div>
+        <img src="{{ item.imgpath }}">
+      </div>
+      <br>
+      <br>
+      <!-- Item title -->
+      <h3 class="headline">
+        {{ item.title }}
+      </h3>
+      <!-- End of Item title -->
+      <br>
+      <!-- Item Category -->
+      <a class="btn__line__square__white">
+        {{ item.category }}
+      </a>
+      <!-- End of Item Category -->
+      <br>
+      <br>
+
+    </div>
+    <!-- End of Header Content -->
+
+    <!-- Content Description -->
+    <div class="item__content">
+      <p padding>
+        {{ item.description }}
+      </p>
+    </div>
+    <!-- End of Content Description -->
+
+</ion-content>
